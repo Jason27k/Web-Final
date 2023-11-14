@@ -33,28 +33,7 @@ const SpotifySearch = () => {
       window.location.hash = '';
       window.localStorage.setItem('token', token);
     }
-
-    try {
-      fetchAlbumsBySearch(token, 'good kid, m.A.A.d city')
-      .then((res) => {
-        console.log('href' + res.href)
-        console.log(!res.href)
-        if (!res.href || res.href === '' || res.href.lenght === 0) {
-          token = '';
-          window.localStorage.removeItem('token');
-        }
-        console.log(res)
-      })
-      .catch((err) => {
-        token = ''
-        window.localStorage.removeItem('token');
-      });
-    } catch (err) {
-        token = '';
-        window.localStorage.removeItem('token');
-    }
     
-
     setToken(token);
     }, []);
 

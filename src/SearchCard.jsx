@@ -24,7 +24,7 @@ import {
               <CardTitle className='w-96'>{name}</CardTitle>
           </CardContent>
           <CardFooter>
-              <CardDescription className='font-bold'>{formatNumberWithCommas(followers)}</CardDescription>
+              <CardDescription className='font-bold'>{followers && formatNumberWithCommas(followers)}</CardDescription>
           </CardFooter>
         </Card>
       );

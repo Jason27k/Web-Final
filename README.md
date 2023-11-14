@@ -30,7 +30,7 @@ Here's a walkthrough of implemented user stories:
 
 ## Notes
 
-Wish I had more time to work on it
+I discovered last minute that Spotify's Client API defaults to Development Mode. This setting necessitates the whitelisting of all users. Consequently, failure to whitelist a user results in their inability to access albums or listen to songs. The sole workaround is to submit an Extension Request, a process that requires some time(weeks to months) for processing. Due to the project's tight deadline and my belated awareness of these restrictions, I couldn't get the request processed in time. As a result, the Spotify functionality will remain unavailable unless I manually add the user to the whitelist.
 
 ## License
 

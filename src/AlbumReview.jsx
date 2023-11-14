@@ -79,8 +79,11 @@ const AlbumReview = () => {
       });
   };
 
+  
   if (!album) {
     return <div>Loading...</div>;
+  } else {
+    console.log(tracks[0].external_urls.spotify)
   }
 
   return (
@@ -89,8 +92,10 @@ const AlbumReview = () => {
         <div className="">
           <h1 className="text-4xl font-bold text-black mb-4">Album Review</h1>
         </div>
-        <img src={image} alt={name} className="h-48 rounded-lg" />
-        <h2 className="text-2xl font-semibold text-black mb-2">{name}</h2>
+        <a href={album.external_urls.spotify}>
+          <img src={image} alt={name} className="h-48 rounded-lg mx-auto" />
+          <h2 className="text-2xl font-semibold text-black mb-2">{name}</h2>
+        </a>
 
         <div className="flex flex-wrap mb-4">
           {artists.map((artist) => (
@@ -117,9 +122,9 @@ const AlbumReview = () => {
                   key={track.id}
                   className="bg-white p-4 rounded-md shadow-md mb-4 w-full flex flex-col items-center"
                 >
-                  <h3 className="text-xl font-semibold text-black mb-2">
+                  <a href={track.external_urls.spotify} className="text-xl font-semibold text-black mb-2">
                     {track.track_number} - {track.name}
-                  </h3>
+                  </a>
 
                   <p className="text-base text-black mr-4">
                     Duration: {(track.duration_ms / 1000 / 60).toFixed(0)} minutes
